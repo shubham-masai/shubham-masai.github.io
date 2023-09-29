@@ -9,7 +9,7 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { education} from '../../data/constants';
 import EducationCard from '../Cards/EducationCard';
-
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -88,7 +88,7 @@ const index = () => {
                 <TimelineSection>
                     <Timeline>
                         {education.map((education,index) => (
-                            <TimelineItem >
+                            <TimelineItem key={index}>
                                 <TimelineContent sx={{ py: '12px', px: 2 }}>
                                     <EducationCard education={education}/>
                                 </TimelineContent>

@@ -133,19 +133,19 @@ const Skills = () => {
 
   return (
     <Container id="skills">
-      <SkillsAnchor id="skills" />
+      <SkillsAnchor/>
       <Wrapper>
         <Title>Skills</Title>
         <Desc>
           Here are some of the skills I have learned from Masai School over the past 6 months.
         </Desc>
         <SkillsContainer>
-          {skills.map((skill) => (
-            <Skill>
+          {skills.map((skill,index) => (
+            <Skill key={index}>
               <SkillTitle>{skill.title}</SkillTitle>
               <SkillList>
-                {skill.skills.map((item) => (
-                  <SkillItem>
+                {skill.skills.map((item, itemindex) => (
+                  <SkillItem key={itemindex}>
                     <SkillImage src={item.image} className='skills-card-img skills-card-name' />
                     {item.name}
                   </SkillItem>

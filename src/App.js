@@ -9,6 +9,7 @@ import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 import Education from "./components/Education";
 import styled from "styled-components";
+import Contact from "./components/Contact/index.js";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -37,6 +38,7 @@ function App() {
           </Wrapper>
           <Wrapper>
             <Education />
+            <Contact/>
           </Wrapper>
           <Footer />
         </Body>
