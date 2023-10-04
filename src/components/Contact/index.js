@@ -185,7 +185,7 @@ const EmailWrapper = styled.div`
   align-items: center;
 `;
 const Contact = () => {
-  //hooks
+  
   const [open, setOpen] = React.useState(false);
   const form = useRef();
 

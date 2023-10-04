@@ -4,12 +4,12 @@ export const Bio = {
     "Full Stack Developer",
     "Programmer",
   ],
-  description:
-    "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
+  description: "An adept MERN stack developer known for delivering scalable and efficient applications with a results-oriented approach.",
   github: "https://github.com/shubham-masai",
   resume:
     "",
   linkedin: "https://www.linkedin.com/in/shubham-jayswal-69ba3b19a",
+  about: "Hello, I'm Shubham Jayswal, an aspiring developer from Bilimora, Gujarat, eager to enter the world of web development with the MERN stack. Despite being new to the field, I'm enthusiastic about learning and have gained hands-on experience with technologies like React, Node.js, Express, and MongoDB during my studies. I'm dedicated to crafting user-friendly interfaces and scalable backends, always striving to expand my skills with the latest tools and technologies. If you have opportunities for someone starting out like me, please feel free to connect. Thank you for considering my profile.",
   twitter: "",
   insta: "https://www.instagram.com/theshubham_03/?igshid=MzMyNGUyNmU2YQ%3D%3D",
   facebook: " ",
@@ -57,14 +57,10 @@ export const skills = [
         name: "Material UI",
         image:
           "data:image/png;base64,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",
-      },
-      {
-        name: "Flutter",
-        image:
-          "https://cdn-images-1.medium.com/max/1200/1*5-aoK8IBmXve5whBQM90GA.png",
-      },
+      }
     ],
   },
+
   {
     title: "Backend",
     skills: [
@@ -80,25 +76,12 @@ export const skills = [
       {
         name: "Graph Ql",
         image: "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg",
-      } ,
-      {
-        name: "MySQL",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
-      },
-      {
-        name: "Postgresql",
-        image: "https://www.postgresql.org/media/img/about/press/elephant.png",
       },
       {
         name: "MongoDB",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
-      },
-      {
-        name: "Firebase",
-        image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
-      },
+      }
     ],
   },
   {
@@ -142,32 +125,56 @@ export const skills = [
     ],
   },
 ];
- 
-export const education = [
+
+
+export const projects = [
   {
     id: 0,
-    img: "https://lwfiles.mycourse.app/masai-school-public/283427801ef0376bad3f197fad544f38.png",
-    school: "Masai School, Bengaluru",
-    date: "Apr 2023 - Nov 2023 ",
-    grade: "7.01 CGPA",
-    desc: "I am currently enrolled in the Full Stack Web Development program at Masai School, Bengaluru. I have successfully completed four comprehensive units within the program, and I have focused my studies on essential areas such as React development and Data Structures And  algorithms.",
+    title: "Connect",
+    description:
+      "It is basically a Student Relationship Management Website. It use to connect people over a Masai Community.We have built some features by taking inspiration for Masai LMS. It was a collabarative project built by a team of five members in a span of 5 days. We basically built this website in three Sections.",
+    image:
+      "https://camo.githubusercontent.com/85a26b31ad2318229a9dee204f0a57ac68bcceac290ea33f21527a46f547043d/68747470733a2f2f6465762d746f2d75706c6f6164732e73332e616d617a6f6e6177732e636f6d2f75706c6f6164732f61727469636c65732f6f74323970646a72393978636f74766b6d6378722e706e67",
+    tags: ["HTML", "CSS", "JavaScript", "MockApi"],
+    github: "https://github.com/shubham-masai/adorable-crown-8253",
+    webapp: "https://connect-lms01.netlify.app/",
   },
   {
     id: 1,
-    img: "",
-    school: "V. S. Patel College of Arts & Science, Bilimora.",
-    date: "Apr 2019 - Apr 2020",
-    grade: "7.33 CGPA",
-    desc: "I completed my postgraduate studies in Chemistry at V.S. Patel College, Bilimora.",
-    degree: "M.Sc Chemistry",
+    title: "Clickit",
+    description:
+      "",
+    image:
+      "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/o70ain3on4s4dqxkq3j6.png",
+    tags: [
+      "HTML", "CSS", "React","React-redux","Redux-Thunk","MockApi","Chakra-UI"
+    ],
+    github: "https://github.com/Sushree-01/dainty-snake-6499",
+    webapp: "https://dainty-snake-6499.vercel.app/",
   },
   {
     id: 2,
-    img:"",
-    school: "B. P. Baria Science Institute, Navsari",
-    date: "Apr 2015 - Apr 2018",
-    grade: "8.05 CGPA",
-    desc: "I completed my graduation studies in Chemistry at B. P. Baria Science Institute, Navsari.",
-    degree: "B.Sc Chemistry",
+    title: "CarePill",
+    description: "CarePill is your personal health assistant, created with you in mind. We get it - life can get busy, and it's easy to forget your pills. That's where CarePill steps in to support your well-being",
+    image:
+      "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rfosdxgc1l6nrnunrvo0.png",
+    tags: [
+      "HTML", "CSS", "React", "MockApi"
+    ],
+    github: "https://github.com/shubham-masai/CarePIll",
+    webapp: "https://pill-reminder-qgg7q1rld-shubham-masai1.vercel.app/",
   },
+  {
+    id: 3,
+    title: "Trakkerz",
+    description:
+      "Your go-to platform for effortless tourist place bookings. Discover, book, and customize your dream vacations with ease. Verified listings, exclusive deals, and 24/7 support - all to make your travel experience unforgettable. Explore the world, simplified with Trakkerz.",
+    image:
+      "https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r3r8k3dm7mj52zdnv5kp.png",
+    tags: [
+      "HTML", "CSS", "JavaScript"
+    ],
+    github: "https://github.com/shubham-masai/Trakkerz",
+    webapp: "https://651bc1fbf13ca03c77460946--preeminent-bombolone-bfea0d.netlify.app/",
+  }
 ];

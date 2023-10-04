@@ -72,8 +72,6 @@ const Skill = styled.div`
     max-width: 330px;
     padding: 10px 36px;
   }
-
-
 `
 
 const SkillTitle = styled.h2`
@@ -133,14 +131,14 @@ const Skills = () => {
 
   return (
     <Container id="skills">
-      <SkillsAnchor/>
+      <SkillsAnchor />
       <Wrapper>
         <Title>Skills</Title>
         <Desc>
           Here are some of the skills I have learned from Masai School over the past 6 months.
         </Desc>
-        <SkillsContainer>
-          {skills.map((skill,index) => (
+        <SkillsContainer className='skills-card'>
+          {skills.map((skill, index) => (
             <Skill key={index}>
               <SkillTitle>{skill.title}</SkillTitle>
               <SkillList>
@@ -153,7 +151,6 @@ const Skills = () => {
               </SkillList>
             </Skill>
           ))}
-
         </SkillsContainer>
       </Wrapper>
     </Container>
