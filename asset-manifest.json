@@ -1,14 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.bf538fe7.css",
-    "main.js": "/static/js/main.11a92315.js",
+    "main.js": "/static/js/main.54a32f89.js",
+    "static/media/Shubham.pdf": "/static/media/Shubham.0a25c402adf4b8b17a24.pdf",
     "static/media/HeroImage.jpg": "/static/media/HeroImage.826e72f8768c5b670c5e.jpg",
     "index.html": "/index.html",
     "main.bf538fe7.css.map": "/static/css/main.bf538fe7.css.map",
-    "main.11a92315.js.map": "/static/js/main.11a92315.js.map"
+    "main.54a32f89.js.map": "/static/js/main.54a32f89.js.map"
   },
   "entrypoints": [
     "static/css/main.bf538fe7.css",
-    "static/js/main.11a92315.js"
+    "static/js/main.54a32f89.js"
   ]
 }
