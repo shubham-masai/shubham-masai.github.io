@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.bf538fe7.css",
-    "main.js": "/static/js/main.52940911.js",
+    "main.js": "/static/js/main.2c0dffa9.js",
     "static/media/Shubham-Jayswal-Resume.pdf": "/static/media/Shubham-Jayswal-Resume.39e838d859d149802317.pdf",
     "static/media/HeroImage.jpg": "/static/media/HeroImage.826e72f8768c5b670c5e.jpg",
     "index.html": "/index.html",
     "main.bf538fe7.css.map": "/static/css/main.bf538fe7.css.map",
-    "main.52940911.js.map": "/static/js/main.52940911.js.map"
+    "main.2c0dffa9.js.map": "/static/js/main.2c0dffa9.js.map"
   },
   "entrypoints": [
     "static/css/main.bf538fe7.css",
-    "static/js/main.52940911.js"
+    "static/js/main.2c0dffa9.js"
   ]
 }
