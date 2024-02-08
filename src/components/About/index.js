@@ -3,9 +3,9 @@ import { AboutDiv, AboutSection, Title } from './AboutStyle';
 import { Bio } from '../../data/constants';
 const About = () => {
   return (
-    <AboutDiv id='about'>
-      <Title id='about.about.section'>About</Title>
-      <AboutSection id='user-detail-intro'>
+    <AboutDiv id='about' className="about section">
+      <Title >About</Title>
+      <AboutSection id='user-detail-intro' className="section">
         {Bio.about}
       </AboutSection>
     </AboutDiv>

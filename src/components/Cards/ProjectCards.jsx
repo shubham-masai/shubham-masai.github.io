@@ -116,23 +116,23 @@ const ButtonGroup = styled.div`
     gap: 12px;
 `;
 
-const ProjectCards = ({ image, tags, title,description,github,webapp}) => {
+const ProjectCards = ({ image, tags, title, description, github, webapp }) => {
     return (
-      
-      <Card className='project-card'>
+
+        <Card className="project-card">
             <Image src={image} />
-            <Tags>
+            <Tags className="project-tech-stack">
                 {tags?.map((tag, index) => (
-                    <Tag key={index + 1} className='project-tech-stack'>{tag}</Tag>
+                    <Tag  key={index + 1}>{tag}</Tag>
                 ))}
             </Tags>
             <Details>
-                <Title className='project-title'>{title}</Title>
-                <Description className='project-description'>{description}</Description>
+                <Title className="project-title" >{title}</Title>
+                <Description className="project-description">{description}</Description>
             </Details>
             <ButtonGroup>
-                <Button dull href={github} target='new' className='project-github-link'>View Code</Button>
-                <Button href={webapp} target='new' className='project-deployed-link'>View Live App</Button>
+                <Button className="project-github-link" dull href={github} target="_blank">View Code</Button>
+                <Button className="project-deployed-link" href={webapp} target="_blank">View Live App</Button>
             </ButtonGroup>
         </Card>
     )

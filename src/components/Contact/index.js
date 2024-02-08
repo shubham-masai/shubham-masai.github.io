@@ -184,23 +184,29 @@ const EmailWrapper = styled.div`
   display: flex;
   align-items: center;
 `;
+
+
+const StyledSnackbar = styled(Snackbar)`
+  position: absolute;
+  top: 50%; 
+  right: 50%; 
+  width: 100px;
+`;
+
 const Contact = () => {
-  
+
   const [open, setOpen] = React.useState(false);
   const form = useRef();
-
   const [userEmail, setUserEmail] = useState("");
   const [userName, setUserName] = useState("");
   const [userMsg, setUsermsg] = useState("");
   const [userSub, setUserSub] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const emailbody = [userEmail, userName, userSub, userMsg]
-
-
+    console.log("chnage the credintials");
     window.Email.send({
-      SecureToken: "3a0f5131-cd12-4011-98fc-17d850be133a",
+      SecureToken: "791c8272-5ee5-44db-bb8d-1296cb777954",
       To: "shubhammasai03@gmail.com",
       From: "senas17941@byorby.com",
       Subject: "Portfolio Messages",
@@ -251,18 +257,21 @@ const Contact = () => {
                 name="from_email"
                 value={userEmail}
                 onChange={(e) => setUserEmail(e.target.value)}
+                required
               />
               <ContactInput
                 placeholder="Your Name"
                 name="from_name"
                 value={userName}
                 onChange={(e) => setUserName(e.target.value)}
+                required
               />
               <ContactInput
                 placeholder="Subject"
                 name="subject"
                 value={userSub}
                 onChange={(e) => setUserSub(e.target.value)}
+                required
               />
               <ContactInputMessage
                 placeholder="Message"
@@ -270,10 +279,11 @@ const Contact = () => {
                 name="message"
                 value={userMsg}
                 onChange={(e) => setUsermsg(e.target.value)}
+                required
               />
               <ContactButton type="submit" />
             </ContactForm>
-            <Snackbar
+            <StyledSnackbar 
               open={open}
               autoHideDuration={6000}
               onClose={() => setOpen(false)}

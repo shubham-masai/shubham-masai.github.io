@@ -20,9 +20,6 @@ flex-direction: column;
 width: 100%;
 max-width: 1100px;
 gap: 12px;
-@media (max-width: 960px) {
-    flex-direction: column;
-}
 `
 
 export const Title = styled.div`
@@ -58,7 +55,8 @@ const SkillsContainer = styled.div`
 
 const Skill = styled.div`
   width: 100%;
-  max-width: 500px;
+  /* max-width: 500px; */
+  max-width: 800px;
   background: ${({ theme }) => theme.card};
   border: 0.1px solid #854CE6;
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
@@ -73,15 +71,6 @@ const Skill = styled.div`
     padding: 10px 36px;
   }
 `
-
-const SkillTitle = styled.h2`
-  font-size: 28px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
-  margin-bottom: 20px;
-  text-align: center;
-`
-
 const SkillList = styled.div`
   display: flex;
   justify-content: center; 
@@ -112,45 +101,30 @@ const SkillItem = styled.div`
 `
 
 const SkillImage = styled.img`
-  width: 24px;
-  height: 24px;
+  width: 35px;
+  height: 35px;
 `
-const SkillsAnchor = styled.div`
-  position: absolute;
-  top: -100px;
-`;
-
+ 
 const Skills = () => {
-
-  const scrollToSkills = () => {
-    const skillsAnchor = document.getElementById('skills');
-    if (skillsAnchor) {
-      skillsAnchor.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-    }
-  };
-
+ 
   return (
     <Container id="skills">
-      <SkillsAnchor />
       <Wrapper>
         <Title>Skills</Title>
         <Desc>
           Here are some of the skills I have learned from Masai School over the past 6 months.
         </Desc>
         <SkillsContainer className='skills-card'>
-          {skills.map((skill, index) => (
-            <Skill key={index}>
-              <SkillTitle>{skill.title}</SkillTitle>
-              <SkillList>
-                {skill.skills.map((item, itemindex) => (
-                  <SkillItem key={itemindex}>
-                    <SkillImage src={item.image} className='skills-card-img skills-card-name' />
-                    {item.name}
-                  </SkillItem>
-                ))}
-              </SkillList>
-            </Skill>
-          ))}
+          <Skill >
+            <SkillList>
+              {skills.map((item, itemindex) => (
+                <SkillItem key={itemindex}>
+                  <SkillImage src={item.image} className='skills-card-img skills-card-name' />
+                  {item.name}
+                </SkillItem>
+              ))}
+            </SkillList>
+          </Skill>
         </SkillsContainer>
       </Wrapper>
     </Container>

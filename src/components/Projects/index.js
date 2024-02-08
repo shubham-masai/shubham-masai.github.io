@@ -1,15 +1,15 @@
 import React from 'react'
-import { Container, Wrapper, Title,CardContainer } from './ProjectsStyle'
+import { Container, Wrapper, Title, CardContainer } from './ProjectsStyle'
 import ProjectCard from '../Cards/ProjectCards'
 import { projects } from '../../data/constants'
 
 
 const Projects = () => {
   return (
-    <Container id="projects">
+    <Container>
       <Wrapper id="projects">
         <Title>Projects</Title>
-        <CardContainer className='project-card'>
+        <CardContainer>
           {projects
             .map((item) => (
               <ProjectCard key={item.id} {...item}/>

@@ -18,6 +18,18 @@ export const HeroContainer = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
 
+export const ButtonContainer = styled.div`
+  width: 80%;  
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0 6px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
 export const HeroBg = styled.div`
   position: absolute;
   display: flex;
@@ -199,5 +211,4 @@ export const ResumeButton = styled.a`
         padding: 12px 0;
         font-size: 18px;
     } 
-
 `;
