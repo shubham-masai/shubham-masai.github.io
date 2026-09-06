@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: var(--font-heading), sans-serif;
+    --font-body: var(--font-inter), sans-serif;
+    --font-code: var(--font-mono), monospace;
+  }
+}
+
+body {
+  background-color: #fafbfc;
+  color: #475569;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+code, pre, .font-mono {
+  font-family: var(--font-code);
+}
+
+/* Custom Light Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6366f1;
+}
+
+/* Keyframe Animations for Hero Image Background & Components */
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes reverse-spin-slow {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.95; transform: scale(1.08); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes morph-blob {
+  0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 30% / 50% 60% 30% 60%; }
+  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-reverse-spin-slow {
+  animation: reverse-spin-slow 25s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-morph-blob {
+  animation: morph-blob 8s ease-in-out infinite;
+}
+
+/* Light Theme Cards & Buttons */
+.card-light {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-light:hover {
+  border-color: #6366f1;
+  box-shadow: 0 12px 30px -4px rgba(99, 102, 241, 0.12);
+  transform: translateY(-4px);
+}
+
+.pill-indigo {
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+}
+
+.btn-primary-indigo {
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btn-primary-indigo:hover {
+  background-color: #4338ca;
+  box-shadow: 0 8px 20px -3px rgba(79, 70, 229, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-secondary-indigo {
+  background-color: #ffffff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary-indigo:hover {
+  background-color: #f8fafc;
+  border-color: #6366f1;
+  color: #4f46e5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
