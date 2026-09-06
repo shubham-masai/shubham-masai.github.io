@@ -81,7 +81,7 @@ export default function TerminalSandbox() {
         window.open(bio.resume, '_blank');
         newLogs.push({
           type: 'output',
-          text: `Opening resume PDF (/Shubham_Resume.pdf) in new tab...`
+          text: `Opening resume PDF (${bio.resume}) in new tab...`
         });
         break;
 

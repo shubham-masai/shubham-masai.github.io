@@ -15,5 +15,11 @@ export default function sitemap() {
         `${baseUrl}/og-image.jpg`,
       ],
     },
+    {
+      url: `${baseUrl}/shubham-jayswal-resume.pdf`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
   ];
 }
