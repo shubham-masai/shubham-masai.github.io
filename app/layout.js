@@ -27,11 +27,14 @@ export const metadata = {
   },
   description: "Official Portfolio of Shubham Jayswal (shubham-masai), Full Stack Web Developer & Software Developer based in Bengaluru and Bilimora, Gujarat. Specialized in React.js, Next.js, Node.js, Express, MongoDB, Redis, and RESTful APIs.",
   keywords: [
-    "Shubham",
     "Shubham Jayswal",
+    "Jayswal Shubham",
+    "Shubham",
+    "Jayswal",
     "Shubham Masai",
     "shubham-masai",
     "Shubham Jayswal Developer",
+    "Jayswal Shubham Developer",
     "Shubham Jayswal Full Stack Developer",
     "Shubham Jayswal Portfolio",
     "Shubham Jayswal Bilimora",
@@ -160,9 +163,11 @@ export default function RootLayout({ children }) {
         "familyName": "Jayswal",
         "alternateName": [
           "Shubham Jayswal",
+          "Jayswal Shubham",
           "shubham-masai",
           "Shubham Masai",
           "Shubham Jayswal Developer",
+          "Jayswal Shubham Developer",
           "Shubham Jayswal Full Stack Developer",
           "Shubham Jayswal Portfolio"
         ],
