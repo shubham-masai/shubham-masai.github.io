@@ -31,6 +31,12 @@ export const metadata = {
     "Shubham Jayswal",
     "Shubham Masai",
     "shubham-masai",
+    "Shubham Jayswal Developer",
+    "Shubham Jayswal Full Stack Developer",
+    "Shubham Jayswal Portfolio",
+    "Shubham Jayswal Bilimora",
+    "Shubham Jayswal Bengaluru",
+    "Shubham Jayswal Gujarat",
     "Full Stack Developer",
     "Software Developer",
     "MERN Stack Developer",
@@ -40,10 +46,9 @@ export const metadata = {
     "MERN Stack Developer Gujarat",
     "Software Developer Bengaluru",
     "Shubham Developer",
-    "Shubham Jayswal Portfolio",
     "Masai School Developer"
   ],
-  authors: [{ name: "Shubham Jayswal", url: "https://github.com/shubham-masai" }],
+  authors: [{ name: "Shubham Jayswal", url: "https://shubham-masai.github.io" }],
   creator: "Shubham Jayswal",
   publisher: "Shubham Jayswal",
   robots: {
@@ -58,7 +63,11 @@ export const metadata = {
     },
   },
   openGraph: {
-    type: "website",
+    type: "profile",
+    firstName: "Shubham",
+    lastName: "Jayswal",
+    username: "shubham-masai",
+    gender: "male",
     locale: "en_US",
     url: "https://shubham-masai.github.io/",
     title: "Shubham Jayswal | Full Stack Software Developer",
@@ -66,10 +75,25 @@ export const metadata = {
     siteName: "Shubham Jayswal Portfolio",
     images: [
       {
-        url: "/Shubham.jpg",
+        url: "https://shubham-masai.github.io/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Shubham Jayswal Full Stack Developer",
+        alt: "Shubham Jayswal - Full Stack Software Developer Portfolio",
+        type: "image/jpeg",
+      },
+      {
+        url: "https://shubham-masai.github.io/shubham-jayswal.jpg",
+        width: 460,
+        height: 460,
+        alt: "Shubham Jayswal - Profile Photo",
+        type: "image/jpeg",
+      },
+      {
+        url: "https://shubham-masai.github.io/shubham-jayswal.webp",
+        width: 460,
+        height: 460,
+        alt: "Shubham Jayswal - Full Stack Developer",
+        type: "image/webp",
       },
     ],
   },
@@ -77,58 +101,116 @@ export const metadata = {
     card: "summary_large_image",
     title: "Shubham Jayswal | Full Stack Software Developer",
     description: "Official Portfolio of Shubham Jayswal (shubham-masai), Full Stack Software Developer.",
-    images: ["/shubham.webp"],
+    images: ["https://shubham-masai.github.io/og-image.jpg"],
   },
   alternates: {
     canonical: "https://shubham-masai.github.io/",
   },
   icons: {
-    icon: "/Shubham.webp",
-    shortcut: "/Shubham.webp",
-    apple: "/Shubham.webp",
+    icon: "/shubham-jayswal.webp",
+    shortcut: "/shubham-jayswal.webp",
+    apple: "/shubham-jayswal.webp",
   },
 };
 
 export default function RootLayout({ children }) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Shubham Jayswal",
-    "alternateName": ["Shubham", "Shubham Masai", "shubham-masai", "Shubham Jayswal Developer"],
-    "url": "https://shubham-masai.github.io",
-    "image": "https://shubham-masai.github.io/Shubham.jpg",
-    "jobTitle": "Full Stack Software Developer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Moshi Moshi"
-    },
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "Masai School"
-    },
-    "sameAs": [
-      "https://github.com/shubham-masai",
-      "https://www.linkedin.com/in/shubhamjayswal",
-      "https://shubham-masai.github.io"
-    ],
-    "knowsAbout": [
-      "Full Stack Web Development",
-      "React.js",
-      "Next.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Redis",
-      "RESTful APIs",
-      "JavaScript",
-      "Tailwind CSS"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bengaluru",
-      "addressRegion": "Karnataka",
-      "addressCountry": "India"
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://shubham-masai.github.io/#website",
+        "url": "https://shubham-masai.github.io/",
+        "name": "Shubham Jayswal Portfolio",
+        "description": "Official portfolio of Shubham Jayswal, Full Stack Software Developer",
+        "publisher": {
+          "@id": "https://shubham-masai.github.io/#person"
+        }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://shubham-masai.github.io/#profilepage",
+        "url": "https://shubham-masai.github.io/",
+        "name": "Shubham Jayswal | Full Stack Software Developer",
+        "isPartOf": {
+          "@id": "https://shubham-masai.github.io/#website"
+        },
+        "about": {
+          "@id": "https://shubham-masai.github.io/#person"
+        },
+        "mainEntity": {
+          "@id": "https://shubham-masai.github.io/#person"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "@id": "https://shubham-masai.github.io/#primaryimage",
+          "url": "https://shubham-masai.github.io/shubham-jayswal.webp",
+          "contentUrl": "https://shubham-masai.github.io/shubham-jayswal.webp",
+          "caption": "Shubham Jayswal - Full Stack Software Developer",
+          "name": "Shubham Jayswal",
+          "width": 460,
+          "height": 460
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://shubham-masai.github.io/#person",
+        "name": "Shubham Jayswal",
+        "givenName": "Shubham",
+        "familyName": "Jayswal",
+        "alternateName": [
+          "Shubham Jayswal",
+          "shubham-masai",
+          "Shubham Masai",
+          "Shubham Jayswal Developer",
+          "Shubham Jayswal Full Stack Developer",
+          "Shubham Jayswal Portfolio"
+        ],
+        "url": "https://shubham-masai.github.io/",
+        "image": {
+          "@type": "ImageObject",
+          "@id": "https://shubham-masai.github.io/#primaryimage",
+          "url": "https://shubham-masai.github.io/shubham-jayswal.webp",
+          "contentUrl": "https://shubham-masai.github.io/shubham-jayswal.webp",
+          "caption": "Shubham Jayswal - Full Stack Software Developer",
+          "name": "Shubham Jayswal Profile Photo",
+          "description": "Shubham Jayswal, Full Stack Software Developer specializing in Next.js, React.js, Node.js, and MERN stack.",
+          "representativeOfPage": true,
+          "width": 460,
+          "height": 460
+        },
+        "jobTitle": "Full Stack Software Developer",
+        "description": "Shubham Jayswal is a Full Stack Software Developer with 2 years of industry experience specializing in MERN stack, Next.js, Redis, and RESTful APIs.",
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Masai School",
+          "url": "https://www.masaischool.com"
+        },
+        "sameAs": [
+          "https://github.com/shubham-masai",
+          "https://www.linkedin.com/in/shubhamjayswal",
+          "https://shubham-masai.github.io"
+        ],
+        "knowsAbout": [
+          "Full Stack Web Development",
+          "React.js",
+          "Next.js",
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "Redis",
+          "RESTful APIs",
+          "JavaScript",
+          "Tailwind CSS"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bilimora",
+          "addressRegion": "Gujarat",
+          "addressCountry": "India"
+        }
+      }
+    ]
   };
 
   return (

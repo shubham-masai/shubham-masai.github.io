@@ -16,7 +16,7 @@ export const bio = {
   github: "https://github.com/shubham-masai",
   linkedin: "https://www.linkedin.com/in/shubhamjayswal",
   resume: "/Shubham_Resume.pdf",
-  avatar: "/Shubham.webp",
+  avatar: "/shubham-jayswal.webp",
   availability: "Available for Full-Time Roles"
 };
 

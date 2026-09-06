@@ -18,7 +18,15 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-b from-[#ffffff] via-[#f8fafc] to-[#f1f5f9]">
+    <section 
+      id="hero" 
+      itemScope 
+      itemType="https://schema.org/Person" 
+      className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-b from-[#ffffff] via-[#f8fafc] to-[#f1f5f9]"
+    >
+      <meta itemProp="name" content="Shubham Jayswal" />
+      <meta itemProp="jobTitle" content="Full Stack Software Developer" />
+      <meta itemProp="url" content="https://shubham-masai.github.io/" />
       
       {/* Background Animated Ambient Light Circles */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-[#6366f1]/15 via-[#8b5cf6]/10 to-[#ec4899]/15 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
@@ -130,13 +138,23 @@ export default function Hero() {
 
               {/* Main Avatar Container */}
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full p-2 bg-white/90 backdrop-blur-md border-2 border-[#cbd5e1] shadow-2xl z-10 group">
-                <div className="relative w-full h-full rounded-full overflow-hidden bg-slate-100">
+                <div 
+                  itemScope 
+                  itemProp="image" 
+                  itemType="https://schema.org/ImageObject"
+                  className="relative w-full h-full rounded-full overflow-hidden bg-slate-100"
+                >
+                  <meta itemProp="name" content="Shubham Jayswal" />
+                  <meta itemProp="caption" content="Shubham Jayswal - Full Stack Software Developer" />
+                  <meta itemProp="representativeOfPage" content="true" />
                   <Image
                     src={bio.avatar}
-                    alt={bio.name}
+                    alt="Shubham Jayswal - Full Stack Software Developer"
+                    title="Shubham Jayswal | Full Stack Software Developer"
                     fill
                     sizes="(max-width: 768px) 256px, 320px"
                     priority
+                    itemProp="contentUrl"
                     className="object-cover object-center group-hover:scale-108 transition-transform duration-500"
                   />
                 </div>

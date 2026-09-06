@@ -9,6 +9,11 @@ export default function sitemap() {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
+      images: [
+        `${baseUrl}/shubham-jayswal.webp`,
+        `${baseUrl}/shubham-jayswal.jpg`,
+        `${baseUrl}/og-image.jpg`,
+      ],
     },
   ];
 }
