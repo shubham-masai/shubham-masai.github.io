@@ -36,19 +36,38 @@ export const metadata = {
     "Shubham Jayswal Developer",
     "Jayswal Shubham Developer",
     "Shubham Jayswal Full Stack Developer",
+    "Shubham Jayswal MERN Stack",
+    "Shubham Jayswal React Developer",
+    "Shubham Jayswal Node Developer",
     "Shubham Jayswal Portfolio",
-    "Shubham Jayswal Bilimora",
-    "Shubham Jayswal Bengaluru",
-    "Shubham Jayswal Gujarat",
     "Full Stack Developer",
-    "Software Developer",
     "MERN Stack Developer",
-    "React.js Developer Bengaluru",
-    "Next.js Engineer",
+    "Node.js Developer",
+    "Node js Developer",
+    "React Developer",
+    "React.js Developer",
+    "Next.js Developer",
+    "Backend Developer",
+    "Frontend Developer",
+    "Web Developer",
+    "Software Developer",
+    "Software Engineer",
+    "JavaScript Developer",
+    "REST API Developer",
+    "RESTful APIs Engineer",
+    "Express.js Developer",
+    "MongoDB Developer",
     "Full Stack Web Developer",
+    "Full Stack Developer India",
+    "Full Stack Developer Bengaluru",
+    "Full Stack Developer Gujarat",
+    "Full Stack Developer Bilimora",
+    "MERN Stack Developer Bengaluru",
     "MERN Stack Developer Gujarat",
-    "Software Developer Bengaluru",
-    "Shubham Developer",
+    "Backend Developer Bengaluru",
+    "Frontend Developer Bengaluru",
+    "Node.js Developer Bengaluru",
+    "React Developer Bengaluru",
     "Masai School Developer"
   ],
   authors: [{ name: "Shubham Jayswal", url: "https://shubham-masai.github.io" }],
@@ -185,7 +204,45 @@ export default function RootLayout({ children }) {
           "height": 460
         },
         "jobTitle": "Full Stack Software Developer",
-        "description": "Shubham Jayswal is a Full Stack Software Developer with 2 years of industry experience specializing in MERN stack, Next.js, Redis, and RESTful APIs.",
+        "description": "Shubham Jayswal is a Full Stack Software Developer with 2 years of industry experience specializing in MERN stack, Next.js, Node.js, React.js, Redis, and RESTful APIs.",
+        "hasOccupation": [
+          {
+            "@type": "Occupation",
+            "name": "Full Stack Developer",
+            "occupationalCategory": "Software Engineering",
+            "skills": "React.js, Next.js, Node.js, Express.js, MongoDB, Redis, RESTful APIs, JavaScript, Tailwind CSS"
+          },
+          {
+            "@type": "Occupation",
+            "name": "MERN Stack Developer",
+            "occupationalCategory": "Full Stack Development",
+            "skills": "MongoDB, Express.js, React.js, Node.js"
+          },
+          {
+            "@type": "Occupation",
+            "name": "Node.js Developer",
+            "occupationalCategory": "Backend Development",
+            "skills": "Node.js, Express.js, REST APIs, Redis, Authentication"
+          },
+          {
+            "@type": "Occupation",
+            "name": "React Developer",
+            "occupationalCategory": "Frontend Development",
+            "skills": "React.js, Next.js, Redux, JavaScript, Tailwind CSS"
+          },
+          {
+            "@type": "Occupation",
+            "name": "Backend Developer",
+            "occupationalCategory": "Backend Engineering",
+            "skills": "Node.js, Express.js, MongoDB, Redis, RESTful APIs"
+          },
+          {
+            "@type": "Occupation",
+            "name": "Frontend Developer",
+            "occupationalCategory": "Frontend Engineering",
+            "skills": "React.js, Next.js, HTML5, CSS3, JavaScript, Responsive UI"
+          }
+        ],
         "alumniOf": {
           "@type": "EducationalOrganization",
           "name": "Masai School",
@@ -198,6 +255,12 @@ export default function RootLayout({ children }) {
         ],
         "knowsAbout": [
           "Full Stack Web Development",
+          "MERN Stack Development",
+          "Frontend Development",
+          "Backend Development",
+          "React Developer",
+          "Next.js Developer",
+          "Node.js Developer",
           "React.js",
           "Next.js",
           "Node.js",
@@ -206,7 +269,8 @@ export default function RootLayout({ children }) {
           "Redis",
           "RESTful APIs",
           "JavaScript",
-          "Tailwind CSS"
+          "Tailwind CSS",
+          "Software Engineering"
         ],
         "address": {
           "@type": "PostalAddress",

@@ -4,9 +4,11 @@ export const bio = {
   experienceYears: 2,
   roles: [
     "Full Stack Developer",
-    "MERN Stack Specialist",
-    "Next.js & React Engineer",
-    "Backend & REST API Developer"
+    "MERN Stack Developer",
+    "React & Next.js Developer",
+    "Node.js Backend Developer",
+    "Frontend Developer",
+    "RESTful API Engineer"
   ],
   description: "Full Stack Developer with 2 years of industry experience specializing in the MERN stack. Experienced in building scalable web applications, designing RESTful APIs, implementing payment gateway integrations, and optimizing performance with Redis caching.",
   about: "Hello! I'm Shubham Jayswal, a Full Stack Software Developer from Bilimora, Gujarat, with 2 years of hands-on software development experience. I specialize in building production e-commerce platforms, custom content management systems, RESTful APIs, and responsive web applications with a focus on performance optimization, security, and smooth user experiences.",
