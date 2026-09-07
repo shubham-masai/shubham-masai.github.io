@@ -90,12 +90,12 @@ export default function Experience() {
                   </span>
                 </div>
 
-                <div>
+                <div className="space-y-1 pt-1">
                   <h4 className="text-lg font-bold text-[#0f172a]">{edu.degree}</h4>
                   <p className="text-xs font-semibold text-[#4f46e5] font-mono">{edu.institution}</p>
                 </div>
 
-                <p className="text-xs text-[#64748b] pt-3 border-t border-[#e2e8f0]">
+                <p className="text-sm text-[#475569] pt-3 border-t border-[#e2e8f0] leading-relaxed">
                   1200+ hours intensive engineering in MERN stack, Data Structures, Algorithms, and production software engineering practices.
                 </p>
               </motion.div>

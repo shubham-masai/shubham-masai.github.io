@@ -17,6 +17,17 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
+  const handleResumeClick = (e) => {
+    if (e) e.preventDefault();
+    window.open(bio.resume, '_blank', 'noopener,noreferrer');
+    const link = document.createElement('a');
+    link.href = bio.resume;
+    link.setAttribute('download', 'Shubham-Jayswal-Resume.pdf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section 
       id="hero" 
@@ -87,6 +98,8 @@ export default function Hero() {
                 href={bio.resume}
                 target="_blank"
                 rel="noopener noreferrer"
+                download="Shubham-Jayswal-Resume.pdf"
+                onClick={handleResumeClick}
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm btn-secondary-indigo shadow-xs"
               >
                 <FileText className="w-4 h-4 text-[#4f46e5]" />

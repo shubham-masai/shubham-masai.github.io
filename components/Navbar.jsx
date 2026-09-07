@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, FileText, User, Code2, Briefcase, FolderGit2, Mail } from 'lucide-react';
+import { Menu, X, FileText, Home, User, Code2, FolderGit2, Mail } from 'lucide-react';
 import { bio } from '@/data/portfolioData';
 
 const navItems = [
+  { name: 'Home', href: '#hero', icon: Home },
   { name: 'About', href: '#about', icon: User },
   { name: 'Skills', href: '#skills', icon: Code2 },
   { name: 'Projects', href: '#projects', icon: FolderGit2 },
-  { name: 'Experience', href: '#experience', icon: Briefcase },
   { name: 'Contact', href: '#contact', icon: Mail },
 ];
 
@@ -19,7 +19,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -40,9 +40,31 @@ export default function Navbar() {
     }, 100);
   };
 
+  const handleResumeClick = (e) => {
+    if (e) e.preventDefault();
+    setMobileMenuOpen(false);
+
+    // 1. Open resume in new tab
+    window.open(bio.resume, '_blank', 'noopener,noreferrer');
+
+    // 2. Automatically trigger resume download
+    const link = document.createElement('a');
+    link.href = bio.resume;
+    link.setAttribute('download', 'Shubham-Jayswal-Resume.pdf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 pt-4 px-4 sm:px-6 transition-all duration-300">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled 
+          ? 'py-3 bg-white/90 backdrop-blur-md border-b border-[#e2e8f0] shadow-xs' 
+          : 'pt-4 bg-transparent'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         
         {/* Brand Logo */}
         <a
@@ -63,10 +85,12 @@ export default function Navbar() {
           </div>
         </a>
 
-        {/* Desktop Nav Items */}
+        {/* Desktop Nav Items in Masai Required Order: Home, About, Skills, Projects, Contact, Resume */}
         <nav
-          className={`hidden md:flex items-center gap-1 px-4 py-2 rounded-full transition-all duration-300 ${
-            scrolled ? 'bg-white/90 backdrop-blur-md border border-[#e2e8f0] shadow-md' : 'bg-white/70 backdrop-blur-sm border border-[#e2e8f0]'
+          className={`hidden md:flex items-center gap-1 px-3 py-1.5 rounded-full transition-all duration-300 ${
+            scrolled 
+              ? 'bg-white/90 border border-[#e2e8f0]' 
+              : 'bg-white/80 backdrop-blur-sm border border-[#e2e8f0] shadow-xs'
           }`}
         >
           {navItems.map((item) => {
@@ -83,23 +107,38 @@ export default function Navbar() {
               </a>
             );
           })}
-        </nav>
 
-        {/* Resume Button & Mobile Toggle */}
-        <div className="flex items-center gap-3">
+          {/* 6. Resume: Opens in new tab & automatically downloads */}
           <a
             href={bio.resume}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold btn-primary-indigo shadow-md"
+            download="Shubham-Jayswal-Resume.pdf"
+            onClick={handleResumeClick}
+            className="ml-1.5 px-4 py-1.5 text-xs font-bold text-white bg-[#4f46e5] hover:bg-[#4338ca] rounded-full transition-all flex items-center gap-1.5 shadow-sm hover:scale-105"
           >
-            <FileText className="w-4 h-4" />
-            <span className="hidden sm:inline">Resume</span>
+            <FileText className="w-3.5 h-3.5" />
+            <span>Resume</span>
+          </a>
+        </nav>
+
+        {/* Mobile View: Quick Resume Action & Hamburger Toggle */}
+        <div className="flex items-center gap-2.5 md:hidden">
+          <a
+            href={bio.resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Shubham-Jayswal-Resume.pdf"
+            onClick={handleResumeClick}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-white bg-[#4f46e5] shadow-sm"
+          >
+            <FileText className="w-3.5 h-3.5" />
+            <span>Resume</span>
           </a>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-xl bg-white border border-[#e2e8f0] text-[#0f172a] shadow-xs"
+            className="p-2 rounded-xl bg-white border border-[#e2e8f0] text-[#0f172a] shadow-xs"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -107,14 +146,14 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Drawer in Exact Order: Home, About, Skills, Projects, Contact, Resume */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden mt-3 max-w-7xl mx-auto bg-white/95 backdrop-blur-md rounded-2xl p-4 overflow-hidden border border-[#e2e8f0] shadow-xl"
+            className="md:hidden mt-3 max-w-7xl mx-4 sm:mx-6 bg-white/95 backdrop-blur-md rounded-2xl p-4 overflow-hidden border border-[#e2e8f0] shadow-xl"
           >
             <div className="flex flex-col gap-2">
               {navItems.map((item) => {
@@ -131,6 +170,19 @@ export default function Navbar() {
                   </a>
                 );
               })}
+
+              {/* 6. Resume in Mobile Drawer */}
+              <a
+                href={bio.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                download="Shubham-Jayswal-Resume.pdf"
+                onClick={handleResumeClick}
+                className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold text-white bg-[#4f46e5] hover:bg-[#4338ca] transition-colors shadow-sm mt-1"
+              >
+                <FileText className="w-4 h-4" />
+                <span>Resume (Open & Download)</span>
+              </a>
             </div>
           </motion.div>
         )}
@@ -138,4 +190,5 @@ export default function Navbar() {
     </header>
   );
 }
+
 

@@ -179,3 +179,37 @@ export const education = [
   }
 ];
 
+export const softSkills = [
+  {
+    name: "Problem Solving & Analytical Thinking",
+    description: "Diagnosing complex technical issues, breaking down requirements, and architecting optimized, efficient solutions.",
+    icon: "Brain"
+  },
+  {
+    name: "Agile & Scrum Collaboration",
+    description: "Active participation in sprint cycles, daily standups, sprint reviews, and cross-functional feature planning.",
+    icon: "Users"
+  },
+  {
+    name: "Effective Communication",
+    description: "Clear technical and non-technical communication across developers, UI/UX designers, clients, and leadership.",
+    icon: "MessageSquare"
+  },
+  {
+    name: "Ownership & Accountability",
+    description: "End-to-end ownership of development tasks from requirement gathering to production deployment and monitoring.",
+    icon: "CheckCircle"
+  },
+  {
+    name: "Continuous Learning & Adaptability",
+    description: "Eager learner staying abreast of modern web standards, new libraries, frameworks, and engineering best practices.",
+    icon: "Sparkles"
+  },
+  {
+    name: "Time Management & Sprint Delivery",
+    description: "Prioritizing engineering tasks, estimating sprint deliverables accurately, and meeting high-velocity product deadlines.",
+    icon: "Clock"
+  }
+];
+
+
